@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import USAMap from "react-usa-map";
 import './App.css';
 
 
@@ -15,6 +16,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p>Backyard Burbs</p>
+          <USAMap />
         </header>
       </div>
     );
