@@ -10,13 +10,16 @@ class App extends Component {
       
     }
   }
+  mapHandler = (event) => {
+    alert(event.target.dataset.name);
+  };
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <p>Backyard Burbs</p>
-          <USAMap />
+          <USAMap onClick={this.mapHandler}/>
         </header>
       </div>
     );
