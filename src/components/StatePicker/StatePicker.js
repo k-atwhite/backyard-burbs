@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { getBirds } from '../../apiCalls';
 import { Link } from 'react-router-dom';
 import './StatePicker.css';
 
