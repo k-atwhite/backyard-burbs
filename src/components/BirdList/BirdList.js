@@ -2,19 +2,23 @@ import React from "react";
 import "./BirdList.css";
 import Bird from "../Bird/Bird";
 
-const BirdList = ({ matchedStateListOfBurbs }) => {
-  const regionalBirds = birds.map((bird) => {
+const BirdList = ({ birdData }) => {
+  const regionalBirds = birdData.map(bird => {
     return (
       <Bird
-        commonName={bird.commonName}
-        scientificName={bird.scientificName}
-        id={bird.id}
-        key={bird.id}
+        commonName={bird.comName}
+        scientificName={bird.sciName}
+        id={bird.speciesCode}
+        key={bird.speciesCode}
       />
     );
   });
 
-  return <div className="birds-container">{regionalBirds}</div>;
+  return (
+    <section className="birds-container">
+      {regionalBirds}
+    </section>
+  );
 };
 
 export default BirdList;
