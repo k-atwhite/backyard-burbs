@@ -14,7 +14,7 @@ class StatePicker extends Component {
   
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log('You selected' + this.state.value)
+    this.props.selectState(this.state.value)
   }
 
   render() {

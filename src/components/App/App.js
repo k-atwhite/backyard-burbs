@@ -9,10 +9,17 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      selectedState: ''
     }
   }
-  
+  componentDidMount() {
+
+  }
+  selectState = (newState) => {
+    this.setState({selectedState: newState})
+    // console.log('selected state', this.state.selectedState)
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,7 +27,7 @@ class App extends Component {
           <p>Backyard Burbs</p>
           <NavBar />
         </header>
-        <StatePicker />
+        <StatePicker selectState = {this.selectState}/>
       </div>
     );
   }
