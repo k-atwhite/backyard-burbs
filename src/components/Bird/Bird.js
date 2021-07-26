@@ -4,8 +4,8 @@ import "./Bird.css";
 const Bird = ({ commonName, scientificName, id }) => {
   return (
     <div className="bird-card">
-      <h3>{commonName}</h3>
-      <p>{scientificName}</p>
+      <h3 className="common-name">{commonName}</h3>
+      <p className="sci-name">{scientificName}</p>
       <button>🔍</button>
     </div>
   );
