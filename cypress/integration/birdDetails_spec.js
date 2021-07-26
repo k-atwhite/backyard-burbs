@@ -1,7 +1,11 @@
-beforeEach(() => {});
+beforeEach(() => {
+  cy.visit();
+});
 
 describe("Bird Details", () => {
-  it("Should visit the url with the specific bird key", () => {});
+  it("Should visit the url with the specific bird key", () => {
+    cy.get();
+  });
 
   it("Should contain details about the bird", () => {});
 
