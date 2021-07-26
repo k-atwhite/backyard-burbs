@@ -3,7 +3,7 @@ import NavBar from '../NavBar/NavBar';
 import { Route } from 'react-router-dom';
 import './App.css';
 import StatePicker from '../StatePicker/StatePicker';
-
+import { getBirds } from '../../apiCalls';
 
 class App extends Component {
   constructor() {
@@ -12,9 +12,10 @@ class App extends Component {
       selectedState: ''
     }
   }
-  componentDidMount() {
+  // componentDidMount() {
+    
+  // }
 
-  }
   selectState = (newState) => {
     this.setState({selectedState: newState})
     // console.log('selected state', this.state.selectedState)

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { getBirds } from '../../apiCalls';
 import './StatePicker.css';
 
 class StatePicker extends Component {
@@ -15,6 +16,7 @@ class StatePicker extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.selectState(this.state.value)
+    getBirds(this.state.value)
   }
 
   render() {
