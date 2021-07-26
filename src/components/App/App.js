@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import USAMap from "react-usa-map";
 import NavBar from '../NavBar/NavBar';
 import { Route } from 'react-router-dom';
 import './App.css';
+import StatePicker from '../StatePicker/StatePicker';
 
 
 class App extends Component {
@@ -12,18 +12,15 @@ class App extends Component {
 
     }
   }
-  mapHandler = (event) => {
-    alert(event.target.dataset.name);
-  };
-
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <p>Backyard Burbs</p>
           <NavBar />
-          <USAMap onClick={this.mapHandler}/>
         </header>
+        <StatePicker />
       </div>
     );
   }
