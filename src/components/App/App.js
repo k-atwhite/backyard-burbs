@@ -23,6 +23,8 @@ class App extends Component {
   }
 
   render() {
+    const loadingMsg = !this.state.regionBirds.length && <h2>Loading your birds...</h2>;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -31,6 +33,7 @@ class App extends Component {
         </header>
         <Switch>
           <Route path='/birds'>
+            {loadingMsg}
             <BirdList birdData={this.state.regionBirds}/>
           </Route>
           <Route path='/'>
