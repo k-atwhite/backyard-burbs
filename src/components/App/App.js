@@ -9,18 +9,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      selectedState: '',
       regionBirds: []
     }
   }
-  // componentDidMount() {
-    
-  // }
-
-  selectState = (newState) => {
-    this.setState({selectedState: newState})
-  }
-
+  
   setBirds = (stateAbv) => {
     getBirds(stateAbv).then(data => this.setState({regionBirds: data}))
   }

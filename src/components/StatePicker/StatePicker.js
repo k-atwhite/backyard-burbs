@@ -15,7 +15,6 @@ class StatePicker extends Component {
   
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.selectState(this.state.value)
     this.props.setBirds(this.state.value)
   }
 
