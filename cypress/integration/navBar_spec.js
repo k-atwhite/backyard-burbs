@@ -1,5 +1,8 @@
+// DO I NEED TO WALK THROUGH ALL THE STEPS TO GET TO THIS NAV BAR IN THE BEFORE EACH?
+// WHERE DO I ADD THE INTERCEPT?
+
 beforeEach(() => {
-  cy.visit();
+  cy.visit("http://localhost:3000/");
 });
 
 describe("Navigation Bar", () => {
