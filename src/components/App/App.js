@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import StatePicker from '../StatePicker/StatePicker';
+import BirdList from '../BirdList/BirdList';
 import { getBirds } from '../../apiCalls';
 
 class App extends Component {
@@ -12,7 +13,7 @@ class App extends Component {
       regionBirds: []
     }
   }
-  
+
   setBirds = (stateAbv) => {
     getBirds(stateAbv).then(data => this.setState({regionBirds: data}))
   }
@@ -24,7 +25,14 @@ class App extends Component {
           <p>Backyard Burbs</p>
           <NavBar />
         </header>
-        <StatePicker selectState = {this.selectState} setBirds = {this.setBirds}/>
+        <Switch>
+          <Route path='/birds'>
+            <BirdList birdData={this.state.regionBirds}/>
+          </Route>
+          <Route path='/'>
+            <StatePicker setBirds = {this.setBirds}/>
+          </Route>
+        </Switch>
       </div>
     );
   }
