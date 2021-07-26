@@ -5,7 +5,7 @@ class StatePicker extends Component {
   constructor() {
     super();
     this.state = {
-      value:'Alabama'
+      value:'AL'
     }
   }
   handleChange = (event) => {
