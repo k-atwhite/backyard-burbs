@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getBirds } from '../../apiCalls';
+import { Link } from 'react-router-dom';
 import './StatePicker.css';
 
 class StatePicker extends Component {
@@ -9,10 +10,11 @@ class StatePicker extends Component {
       value:'AL'
     }
   }
+
   handleChange = (event) => {
     this.setState({value: event.target.value})
-  } 
-  
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.setBirds(this.state.value)
@@ -76,11 +78,12 @@ class StatePicker extends Component {
             <option value='WY'>Wyoming</option>
           </select>
         </label>
-        <button onClick={this.handleSubmit}>Submit</button>
+        <button onClick={this.handleSubmit}>
+          <Link to='/birds'>Submit</Link>
+        </button>
       </form>
     )
   }
 }
 
 export default StatePicker;
-
