@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NavBar from '../NavBar/NavBar';
 import { Route } from 'react-router-dom';
 import './App.css';
+import StatePicker from '../StatePicker/StatePicker';
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
           <p>Backyard Burbs</p>
           <NavBar />
         </header>
+        <StatePicker />
       </div>
     );
   }

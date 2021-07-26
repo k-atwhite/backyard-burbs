@@ -11,6 +11,11 @@ class StatePicker extends Component {
   handleChange = (event) => {
     this.setState({value: event.target.value})
   } 
+  
+  handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('You selected' + this.state.value)
+  }
 
   render() {
     return (
@@ -70,6 +75,7 @@ class StatePicker extends Component {
             <option value='WY'>Wyoming</option>
           </select>
         </label>
+        <button onClick={this.handleSubmit}>Submit</button>
       </form>
     )
   }
