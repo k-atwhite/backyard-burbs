@@ -2,7 +2,6 @@ const myHeaders = new Headers(); myHeaders.append("X-eBirdApiToken", "cbf0pmjd3n
 const requestOptions = { method: 'GET', headers: myHeaders, redirect: 'follow' };
 
 export const getBirds = (currentState) => {
-  fetch(`https://api.ebird.org/v2/data/obs/US-${currentState}/recent`, requestOptions)
+  return fetch(`https://api.ebird.org/v2/data/obs/US-${currentState}/recent`, requestOptions)
   .then(response => response.text())
-  .then(data => console.log(data))
 }

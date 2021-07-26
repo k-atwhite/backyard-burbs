@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      selectedState: ''
+      selectedState: '',
+      regionBirds: []
     }
   }
   // componentDidMount() {
@@ -18,7 +19,10 @@ class App extends Component {
 
   selectState = (newState) => {
     this.setState({selectedState: newState})
-    // console.log('selected state', this.state.selectedState)
+  }
+
+  setBirds = (stateAbv) => {
+    getBirds(stateAbv).then(data => this.setState({regionBirds: data}))
   }
 
   render() {
@@ -28,7 +32,7 @@ class App extends Component {
           <p>Backyard Burbs</p>
           <NavBar />
         </header>
-        <StatePicker selectState = {this.selectState}/>
+        <StatePicker selectState = {this.selectState} setBirds = {this.setBirds}/>
       </div>
     );
   }
