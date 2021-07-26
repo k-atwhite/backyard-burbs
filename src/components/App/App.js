@@ -18,6 +18,10 @@ class App extends Component {
     getBirds(stateAbv).then(data => this.setState({regionBirds: data}))
   }
 
+  clearBirds = () => {
+    this.setState({ regionBirds: [] });
+  }
+
   render() {
     return (
       <div className="App">
@@ -30,7 +34,7 @@ class App extends Component {
             <BirdList birdData={this.state.regionBirds}/>
           </Route>
           <Route path='/'>
-            <StatePicker setBirds = {this.setBirds}/>
+            <StatePicker setBirds = {this.setBirds} clearBirds={this.clearBirds}/>
           </Route>
         </Switch>
       </div>
