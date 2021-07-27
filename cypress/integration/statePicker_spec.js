@@ -12,6 +12,7 @@ describe("State Picker", () => {
   });
 
   it("Should show all 50 states", () => {
+    // Change to options are length of 50 - something like that
     cy.get("option[value=AK]").get("option[value=WY]");
   });
 
