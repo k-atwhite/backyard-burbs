@@ -8,7 +8,6 @@ const Bird = ({ commonName, scientificName, id }) => {
       <div className="bird-card">
         <h3>{commonName}</h3>
         <p>{scientificName}</p>
-        <button>🔍</button>
       </div>
     </Link>
     

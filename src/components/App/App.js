@@ -37,7 +37,7 @@ class App extends Component {
             const bird = this.state.regionBirds.find(bird => bird.speciesCode === match.params.id)
 
             if(!bird) {
-              return (<div>That bird doesn't exist!</div>)
+              return (<h2>That bird doesn't exist!</h2>)
             }
             return <BirdDetails bird = {bird} />
           }}>

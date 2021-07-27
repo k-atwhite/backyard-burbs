@@ -8,6 +8,7 @@ const BirdDetails = ({bird}) => {
       <p>{bird.sciName}</p>
       <p>Last seen on: {bird.obsDt}</p>
       <p>How many? {bird.howMany}</p>
+      <button>🔍</button>
     </div>
   )
 }
