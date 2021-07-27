@@ -10,7 +10,6 @@ const Bird = ({ commonName, scientificName, id }) => {
         <p>{scientificName}</p>
       </div>
     </Link>
-    
   );
 };
 
