@@ -5,6 +5,7 @@ import './App.css';
 import StatePicker from '../StatePicker/StatePicker';
 import BirdList from '../BirdList/BirdList';
 import { getBirds } from '../../apiCalls';
+import BirdDetails from '../BirdDetails/BirdDetails';
 
 class App extends Component {
   constructor() {
@@ -32,6 +33,16 @@ class App extends Component {
           <NavBar />
         </header>
         <Switch>
+          <Route path='/birds/:id' render={({ match }) => {
+            const bird = this.state.regionBirds.find(bird => bird.speciesCode === match.params.id)
+
+            if(!bird) {
+              return (<h2>That bird doesn't exist!</h2>)
+            }
+            return <BirdDetails bird = {bird} />
+          }}>
+            
+          </Route>
           <Route path='/birds'>
             {loadingMsg}
             <BirdList birdData={this.state.regionBirds}/>
