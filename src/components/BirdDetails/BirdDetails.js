@@ -14,7 +14,7 @@ const BirdDetails = ({ bird, addBird }) => {
           className="binoculars"
           src={binoculars}
           alt="binoculars"
-          onClick={addBird}
+          onClick={addBird(bird)}
         />
       </Link>
     </div>
