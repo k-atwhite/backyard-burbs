@@ -1,31 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './StatePicker.css';
 
-class StatePicker extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value:'AL'
-    }
+const StatePicker = (props) => {
+  const [value, setValue] = useState('AL')
+
+  const handleChange = (event) => {
+    setValue(event.target.value)
   }
 
-  handleChange = (event) => {
-    this.setState({value: event.target.value})
-  }
-
-  handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    this.props.clearBirds();
-    this.props.setBirds(this.state.value);
+    props.clearBirds();
+    props.setBirds(value);
   }
 
-  render() {
+  
     return (
       <form className= 'dropdown'>
         <label>
           Select your state:
-          <select value={this.state.value} onChange={this.handleChange}>
+          <select value={value} onChange={handleChange}>
             <option value='AL'>Alabama</option>
             <option value='AK'>Alaska</option>
             <option value='AZ'>Arizona</option>
@@ -78,12 +73,11 @@ class StatePicker extends Component {
             <option value='WY'>Wyoming</option>
           </select>
         </label>
-        <button onClick={this.handleSubmit}>
+        <button onClick={handleSubmit}>
           <Link to='/birds'>Submit</Link>
         </button>
       </form>
     )
-  }
 }
 
 export default StatePicker;
