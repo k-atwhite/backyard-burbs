@@ -6,7 +6,6 @@ import StatePicker from "../StatePicker/StatePicker";
 import BirdList from "../BirdList/BirdList";
 import { getBirds } from "../../apiCalls";
 import BirdDetails from "../BirdDetails/BirdDetails";
-import MyBirds from "../MyBirds/MyBirds";
 import ThemeContext from "../ThemeContext";
 
 const App = () => {
@@ -55,7 +54,7 @@ const App = () => {
             <BirdList birdData={regionBirds} />
           </Route>
           <Route path="/myBirds">
-            <MyBirds birdData={myBirds} />
+            <BirdList birdData={myBirds} />
           </Route>
           <Route path="/">
             <StatePicker setBirds={setBirds} clearBirds={clearBirds} />
