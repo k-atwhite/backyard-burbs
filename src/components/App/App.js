@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
@@ -7,19 +7,12 @@ import BirdList from "../BirdList/BirdList";
 import { getBirds } from "../../apiCalls";
 import BirdDetails from "../BirdDetails/BirdDetails";
 import MyBirds from "../MyBirds/MyBirds";
-
-// class App extends Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       regionBirds: [],
-//       myBirds: [],
-//     };
-//   }
+import ThemeContext from "../ThemeContext";
 
 const App = () => {
-  const [regionBirds, setRegionBirds] = useState([])
-  const [myBirds, setMyBirds] = useState([])
+  const [regionBirds, setRegionBirds] = useState([]);
+  const [myBirds, setMyBirds] = useState([]);
+  const [theme, setTheme] = useState("goldfinch");
 
   const setBirds = (stateAbv) => {
     getBirds(stateAbv).then((data) => setRegionBirds(data));
@@ -33,12 +26,11 @@ const App = () => {
     setMyBirds([seenBird, ...myBirds]);
   };
 
-  const loadingMsg = !regionBirds.length && (
-      <h2>Loading your birds...</h2>
-    );
+  const loadingMsg = !regionBirds.length && <h2>Loading your birds...</h2>;
 
-    return (
-      <div className="App">
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`App ${theme}`}>
         <header className="App-header">
           <p>Backyard Burbs</p>
           <NavBar />
@@ -63,17 +55,15 @@ const App = () => {
             <BirdList birdData={regionBirds} />
           </Route>
           <Route path="/myBirds">
-            <MyBirds birdData={myBirds}/>
+            <MyBirds birdData={myBirds} />
           </Route>
           <Route path="/">
-            <StatePicker
-              setBirds={setBirds}
-              clearBirds={clearBirds}
-            />
+            <StatePicker setBirds={setBirds} clearBirds={clearBirds} />
           </Route>
         </Switch>
       </div>
-    );
-}
+    </ThemeContext.Provider>
+  );
+};
 
 export default App;
