@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { useState} from "react";
 import NavBar from "../NavBar/NavBar";
 import { Route, Switch } from "react-router-dom";
 import "./App.css";
@@ -8,29 +8,32 @@ import { getBirds } from "../../apiCalls";
 import BirdDetails from "../BirdDetails/BirdDetails";
 import MyBirds from "../MyBirds/MyBirds";
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      regionBirds: [],
-      myBirds: [],
-    };
-  }
+// class App extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       regionBirds: [],
+//       myBirds: [],
+//     };
+//   }
 
-  setBirds = (stateAbv) => {
-    getBirds(stateAbv).then((data) => this.setState({ regionBirds: data }));
+const App = () => {
+  const [regionBirds, setRegionBirds] = useState([])
+  const [myBirds, setMyBirds] = useState([])
+
+  const setBirds = (stateAbv) => {
+    getBirds(stateAbv).then((data) => setRegionBirds(data));
   };
 
-  clearBirds = () => {
-    this.setState({ regionBirds: [] });
+  const clearBirds = () => {
+    setRegionBirds([]);
   };
 
-  addBird = (seenBird) => {
-    this.setState({ myBirds: [seenBird, ...this.state.myBirds] });
+  const addBird = (seenBird) => {
+    setMyBirds([seenBird, ...myBirds]);
   };
 
-  render() {
-    const loadingMsg = !this.state.regionBirds.length && (
+  const loadingMsg = !regionBirds.length && (
       <h2>Loading your birds...</h2>
     );
 
@@ -44,7 +47,7 @@ class App extends Component {
           <Route
             path="/birds/:id"
             render={({ match }) => {
-              const bird = this.state.regionBirds.find(
+              const bird = regionBirds.find(
                 (bird) => bird.speciesCode === match.params.id
               );
 
@@ -52,26 +55,25 @@ class App extends Component {
                 return <h2>That bird doesn't exist!</h2>;
               }
 
-              return <BirdDetails bird={bird} addBird={this.addBird} />;
+              return <BirdDetails bird={bird} addBird={addBird} />;
             }}
           ></Route>
           <Route path="/birds">
             {loadingMsg}
-            <BirdList birdData={this.state.regionBirds} />
+            <BirdList birdData={regionBirds} />
           </Route>
           <Route path="/myBirds">
-            <MyBirds birdData={this.state.myBirds}/>
+            <MyBirds birdData={myBirds}/>
           </Route>
           <Route path="/">
             <StatePicker
-              setBirds={this.setBirds}
-              clearBirds={this.clearBirds}
+              setBirds={setBirds}
+              clearBirds={clearBirds}
             />
           </Route>
         </Switch>
       </div>
     );
-  }
 }
 
 export default App;
