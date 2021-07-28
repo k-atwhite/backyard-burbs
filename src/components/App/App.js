@@ -13,7 +13,7 @@ class App extends Component {
     super();
     this.state = {
       regionBirds: [],
-      myBird: {},
+      myBirds: [],
     };
   }
 
@@ -26,7 +26,7 @@ class App extends Component {
   };
 
   addBird = (seenBird) => {
-    this.setState({ myBird: seenBird });
+    this.setState({ myBirds: [seenBird, ...this.state.myBirds] });
   };
 
   render() {
@@ -51,6 +51,7 @@ class App extends Component {
               if (!bird) {
                 return <h2>That bird doesn't exist!</h2>;
               }
+
               return <BirdDetails bird={bird} addBird={this.addBird} />;
             }}
           ></Route>
@@ -59,7 +60,7 @@ class App extends Component {
             <BirdList birdData={this.state.regionBirds} />
           </Route>
           <Route path="/myBirds">
-            <MyBirds />
+            <MyBirds birdData={this.state.myBirds}/>
           </Route>
           <Route path="/">
             <StatePicker
