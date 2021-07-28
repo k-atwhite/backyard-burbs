@@ -1,8 +1,11 @@
 import "./BirdDetails.css";
 import binoculars from "../../binoculars.svg";
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 const BirdDetails = ({ bird, addBird }) => {
+  const [newBird, setNewBird] = useState(bird);
+
   return (
     <div className="bird-detail">
       <h3>{bird.comName}</h3>
@@ -14,7 +17,7 @@ const BirdDetails = ({ bird, addBird }) => {
           className="binoculars"
           src={binoculars}
           alt="binoculars"
-          onClick={addBird(bird)}
+          onClick={() => addBird(newBird)}
         />
       </Link>
     </div>
