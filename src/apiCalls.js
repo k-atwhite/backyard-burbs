@@ -7,6 +7,6 @@ export const getBirds = (currentState) => {
 }
 
 export const getImages = (birdName) => {
-  return fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50906f9c24e50a02f0d6034a3c6df6d7&per_page=5&format=json&nojsoncallback=1&text=${birdName}`)
+  return fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50906f9c24e50a02f0d6034a3c6df6d7&per_page=1&format=json&nojsoncallback=1&text=${birdName}`)
     .then(response => response.json())
 }
