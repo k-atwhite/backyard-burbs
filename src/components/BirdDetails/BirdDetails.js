@@ -13,12 +13,14 @@ const BirdDetails = ({ bird, addBird }) => {
       <p>Last seen on: {bird.obsDt}</p>
       <p>How many? {bird.howMany}</p>
       <Link to="/myBirds">
+      <div onClick={() => addBird(newBird)}>
         <img
           className="binoculars"
           src={binoculars}
           alt="binoculars"
-          onClick={() => addBird(newBird)}
         />
+        <p>I see it!</p>
+        </div>
       </Link>
     </div>
   );
