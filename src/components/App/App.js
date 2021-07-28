@@ -7,7 +7,7 @@ import BirdList from "../BirdList/BirdList";
 import { getBirds } from "../../apiCalls";
 import BirdDetails from "../BirdDetails/BirdDetails";
 import MyBirds from "../MyBirds/MyBirds";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../ThemeContext";
 
 const App = () => {
   const [regionBirds, setRegionBirds] = useState([]);
@@ -26,15 +26,10 @@ const App = () => {
     setMyBirds([seenBird, ...myBirds]);
   };
 
-  const toggleTheme = () => {
-    const newTheme = theme === "goldfinch" ? "blueJay" : "goldfinch";
-    setTheme(newTheme);
-  };
-
   const loadingMsg = !regionBirds.length && <h2>Loading your birds...</h2>;
 
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="App">
         <header className="App-header">
           <p>Backyard Burbs</p>

@@ -2,7 +2,7 @@ import "./BirdDetails.css";
 import binoculars from "../../binoculars.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import ThemeContext from "./ThemeContext";
+import ThemeContext from "../ThemeContext";
 
 const BirdDetails = ({ bird, addBird }) => {
   const [newBird, setNewBird] = useState(bird);
