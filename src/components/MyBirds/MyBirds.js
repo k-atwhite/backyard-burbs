@@ -12,7 +12,7 @@ const MyBirds = ({ birdData }) => {
       />
     );
   });
-  return <section className="my-birds-container"> {seenBirds}</section>;
+  return <section className="birds-container"> {seenBirds}</section>;
 };
 
 export default MyBirds;
