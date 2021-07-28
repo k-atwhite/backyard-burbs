@@ -55,7 +55,7 @@ const App = () => {
             <BirdList birdData={regionBirds} />
           </Route>
           <Route path="/myBirds">
-            <MyBirds birdData={myBirds} />
+            <BirdList birdData={myBirds} />
           </Route>
           <Route path="/">
             <StatePicker setBirds={setBirds} clearBirds={clearBirds} />
