@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className="App">
+      <div className={`App ${theme}`}>
         <header className="App-header">
           <p>Backyard Burbs</p>
           <NavBar />

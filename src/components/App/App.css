@@ -1,11 +1,20 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 path {
   pointer-events: all;
 }
 path:hover {
-  opacity: 0.50;
+  opacity: 0.5;
   cursor: pointer;
+}
+
+.goldfinch {
+  background: #f8dc6c;
+}
+
+.bluejay {
+  background: #134a8e;
 }
