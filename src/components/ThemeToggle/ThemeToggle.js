@@ -10,7 +10,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <label className="switch">
+    <label className="switch toggle">
       <input type="checkbox" onClick={handleToggle} />
       <span className="slider round"></span>
     </label>
