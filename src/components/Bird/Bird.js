@@ -15,7 +15,7 @@ const Bird = ({ commonName, scientificName, id }) => {
       return photoUrl;
   }
 
-  getImages(scientificName)
+  getImages(scientificName, 1)
   .then(data => {
     if (!photos.length) {
       const url = createURL(data.photos.photo[0])
