@@ -10,38 +10,50 @@ const BirdDetails = ({ bird, addBird }) => {
   const [photos, setPhotos] = useState([]);
 
   const createURL = (photo) => {
-    const photoUrl = 'https://live.staticflickr.com/' + photo.server + '/' +
-      photo.id + '_' + photo.secret + '_b.jpg';
+    const photoUrl =
+      "https://live.staticflickr.com/" +
+      photo.server +
+      "/" +
+      photo.id +
+      "_" +
+      photo.secret +
+      "_b.jpg";
 
-      return photoUrl;
-  }
+    return photoUrl;
+  };
 
-  getImages(bird.sciName, 3)
-    .then(data => {
-      if(!photos.length) {
-        const url = data.photos.photo.map(photo => {
-          return createURL(photo)
-        })
-        setPhotos(url)
-      }
-
-    })
+  getImages(bird.sciName, 3).then((data) => {
+    if (!photos.length) {
+      const url = data.photos.photo.map((photo) => {
+        return createURL(photo);
+      });
+      setPhotos(url);
+    }
+  });
 
   return (
-    <div className="bird-detail">
-      <img src={photos[0]} width='300px'/>
-      <img src={photos[1]} width='300px'/>
-      <img src={photos[2]} width='300px'/>
-      <h3>{bird.comName}</h3>
-      <p>{bird.sciName}</p>
-      <p>Last seen on: {bird.obsDt}</p>
-      <p>How many? {bird.howMany}</p>
-      <Link to="/myBirds">
-        <div onClick={() => addBird(newBird)}>
-          <img className="binoculars" src={binoculars} alt="binoculars" />
-          <p>I see it!</p>
+    <div className="bird-detail-container">
+      <div className="bird-detail-images">
+        <img src={photos[0]} className="bird-detail-image" />
+        <img src={photos[1]} className="bird-detail-image" />
+        <img src={photos[2]} className="bird-detail-image" />
+      </div>
+      <div className="bird-details">
+        <div className="bird-words">
+          <h3>Common Name: {bird.comName}</h3>
+          <p>Scientific Name: {bird.sciName}</p>
+          <p>Last seen on: {bird.obsDt}</p>
+          <p>How many? {bird.howMany}</p>
         </div>
-      </Link>
+        <div className="binoculars-container">
+          <Link to="/myBirds">
+            <div onClick={() => addBird(newBird)}>
+              <img className="binoculars" src={binoculars} alt="binoculars" />
+              <p className="binoc-text">I see it!</p>
+            </div>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
