@@ -2,20 +2,16 @@ nav {
   font-family: "Chelsea Market", cursive;
   color: #f8dc6c;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0px 10px 0px 10px;
 }
 
 .nav-link:hover {
   color: white;
-  background-color:#134a8e;
+  background-color:#134a8e; 
   border-radius: 5px;
-  margin: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px; 
 }
-
-/* .nav-link{
-  margin-bottom: 0px;
-} */
 
 .goldfinch {
   color:#134a8e;
@@ -24,3 +20,4 @@ nav {
 .bluejay {
   color: #f8dc6c;;
 }
+

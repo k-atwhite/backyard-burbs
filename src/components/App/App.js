@@ -8,6 +8,7 @@ import { getBirds } from "../../apiCalls";
 import BirdDetails from "../BirdDetails/BirdDetails";
 import ThemeContext from "../ThemeContext";
 import burb from "./burb.png";
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 const App = () => {
   const [regionBirds, setRegionBirds] = useState([]);
@@ -36,6 +37,7 @@ const App = () => {
             Backyard Burbs
             <img src={burb} alt="burb-logo" className="burb-logo" />
           </h1>
+          <ThemeToggle />
           <NavBar />
         </header>
         <Switch>
