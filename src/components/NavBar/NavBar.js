@@ -6,7 +6,6 @@ import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const NavBar = () => {
   const value = useContext(ThemeContext);
-  console.log(value, 'value')
   return (
     <nav>
       <NavLink to="/" className={`nav-link ${value.theme}`}>
