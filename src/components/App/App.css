@@ -5,7 +5,6 @@
 
 h1 {
   font-family: "Chelsea Market", cursive;
-  color: #f8dc6c;
 }
 
 path {
@@ -18,10 +17,12 @@ path:hover {
 
 .goldfinch {
   background: #f8dc6c;
+  color:#134a8e;
 }
 
 .bluejay {
   background: #134a8e;
+  color:#f8dc6c;
 }
 
 .burb-logo {
