@@ -9,10 +9,16 @@ const Bird = ({ commonName, scientificName, id }) => {
   const [photos, setPhotos] = useState([]);
 
   const createURL = (photo) => {
-    const photoUrl = 'https://live.staticflickr.com/' + photo.server + '/' +
-      photo.id + '_' + photo.secret + '_b.jpg';
+    let photoURL;
 
-    return photoUrl;
+    if (photo) {
+      photoURL = 'https://live.staticflickr.com/' + photo.server + '/' +
+      photo.id + '_' + photo.secret + '_b.jpg';
+    } else {
+      photoURL = 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png';
+    }
+
+    return photoURL;
   }
 
   getImages(scientificName, 1)
