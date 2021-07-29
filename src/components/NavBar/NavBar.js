@@ -11,7 +11,7 @@ const NavBar = () => {
     <nav>
       <NavLink to="/">Choose State</NavLink>
       <NavLink to="/birds">List of Birds</NavLink>
-      <NavLink to="/seen">My Birds</NavLink>
+      <NavLink to="/myBirds">My Birds</NavLink>
       <ThemeToggle />
     </nav>
   );
