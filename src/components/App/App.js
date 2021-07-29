@@ -32,7 +32,7 @@ const App = () => {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`App ${theme}`}>
         <header className="App-header">
-          <h1>
+          <h1 className={`${theme.value}`}>
             Backyard Burbs
             <img src={burb} alt="burb-logo" className="burb-logo" />
           </h1>
