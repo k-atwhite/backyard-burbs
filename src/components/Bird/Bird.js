@@ -12,7 +12,7 @@ const Bird = ({ commonName, scientificName, id }) => {
     const photoUrl = 'https://live.staticflickr.com/' + photo.server + '/' +
       photo.id + '_' + photo.secret + '_b.jpg';
 
-      return photoUrl;
+    return photoUrl;
   }
 
   getImages(scientificName, 1)
@@ -25,10 +25,10 @@ const Bird = ({ commonName, scientificName, id }) => {
 
   return (
     <Link to={`/birds/${id}`}>
-      <div className={`bird-card ${value}`}>
-        <img src={photos} width='300px'/>
-        <h3>{commonName}</h3>
-        <p>{scientificName}</p>
+      <div
+      className={`bird-card ${value}`}
+      style={{backgroundImage: `url('${photos}')`}}>
+        <h3 className='card-text'>{commonName}</h3>
       </div>
     </Link>
   );
