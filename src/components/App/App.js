@@ -7,6 +7,7 @@ import BirdList from "../BirdList/BirdList";
 import { getBirds } from "../../apiCalls";
 import BirdDetails from "../BirdDetails/BirdDetails";
 import ThemeContext from "../ThemeContext";
+import burb from "./burb.png";
 
 const App = () => {
   const [regionBirds, setRegionBirds] = useState([]);
@@ -31,7 +32,10 @@ const App = () => {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`App ${theme}`}>
         <header className="App-header">
-          <p>Backyard Burbs</p>
+          <h1>
+            Backyard Burbs
+            <img src={burb} alt="burb-logo" className="burb-logo" />
+          </h1>
           <NavBar />
         </header>
         <Switch>

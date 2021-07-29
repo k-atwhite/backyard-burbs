@@ -3,6 +3,11 @@
   height: 100%;
 }
 
+h1 {
+  font-family: "Chelsea Market", cursive;
+  color: #f8dc6c;
+}
+
 path {
   pointer-events: all;
 }
@@ -17,4 +22,8 @@ path:hover {
 
 .bluejay {
   background: #134a8e;
+}
+
+.burb-logo {
+  height: 13vh;
 }

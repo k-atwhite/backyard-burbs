@@ -9,9 +9,15 @@ const NavBar = () => {
 
   return (
     <nav>
-      <NavLink to="/">Choose State</NavLink>
-      <NavLink to="/birds">List of Birds</NavLink>
-      <NavLink to="/myBirds">My Birds</NavLink>
+      <NavLink to="/" className="nav-link">
+        Choose State
+      </NavLink>
+      <NavLink to="/birds" className="nav-link">
+        List of Birds
+      </NavLink>
+      <NavLink to="/myBirds" className="nav-link">
+        My Birds
+      </NavLink>
       <ThemeToggle />
     </nav>
   );
