@@ -16,14 +16,6 @@ const BirdDetails = ({ bird, addBird }) => {
       return photoUrl;
   }
 
-  // getImages(scientificName, 3)
-  // .then(data => {
-  //   if (!photos.length) {
-  //     const url = createURL(data.photos.photo)
-  //     setPhotos(url)
-  //   }
-  // });
-
   getImages(bird.sciName, 3)
     .then(data => {
       if(!photos.length) {
