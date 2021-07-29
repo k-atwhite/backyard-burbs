@@ -2,3 +2,17 @@
   max-width: 10vw;
   max-height: 10vw;
 }
+
+.bird-detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bird-details {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bird-detail-image {
+  height: 20vw;
+}
