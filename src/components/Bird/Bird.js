@@ -9,10 +9,16 @@ const Bird = ({ commonName, scientificName, id }) => {
   const [photos, setPhotos] = useState([]);
 
   const createURL = (photo) => {
-    const photoUrl = 'https://live.staticflickr.com/' + photo.server + '/' +
-      photo.id + '_' + photo.secret + '_b.jpg';
+    let photoURL;
 
-      return photoUrl;
+    if (photo) {
+      photoURL = 'https://live.staticflickr.com/' + photo.server + '/' +
+      photo.id + '_' + photo.secret + '_b.jpg';
+    } else {
+      photoURL = 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png';
+    }
+
+    return photoURL;
   }
 
   getImages(scientificName, 1)
@@ -25,10 +31,10 @@ const Bird = ({ commonName, scientificName, id }) => {
 
   return (
     <Link to={`/birds/${id}`}>
-      <div className={`bird-card ${value}`}>
-        <img src={photos} width='300px'/>
-        <h3>{commonName}</h3>
-        <p>{scientificName}</p>
+      <div
+      className={`bird-card ${value}`}
+      style={{backgroundImage: `url('${photos}')`}}>
+        <h3 className='card-text'>{commonName}</h3>
       </div>
     </Link>
   );

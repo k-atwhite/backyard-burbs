@@ -1,5 +1,25 @@
 .bird-card {
   box-sizing: border-box;
-  border: 3px solid black;
-  padding: 10px;
+  border-radius: 2vw;
+  height: 18vw;
+  position:relative;
+  background:url() 10% 10% no-repeat;
+  background-size:cover;
+  background-clip:content-box;
+}
+
+.card-text {
+  position: relative;
+  text-align: center;
+  top: 15vw;
+  left: 1.1vw;
+  width: 20vw;
+  padding: 0.6vw;
+  color: black;
+  background: white;
+  border-radius: 1vw;
+}
+
+h3 {
+  margin: 0;
 }
