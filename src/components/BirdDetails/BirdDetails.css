@@ -1,6 +1,14 @@
 .binoculars {
   max-width: 10vw;
   max-height: 10vw;
+  text-decoration: none;
+}
+
+.binoculars-container {
+  background-color: white;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
 }
 
 .bird-detail-container {
@@ -15,4 +23,11 @@
 
 .bird-detail-image {
   height: 20vw;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.binoc-text {
+  margin-top: 0%;
+  color: black;
 }
