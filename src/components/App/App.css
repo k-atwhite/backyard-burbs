@@ -11,6 +11,7 @@ h1 {
 
 path {
   pointer-events: all;
+  fill: white;
 }
 path:hover {
   opacity: 0.5;
@@ -25,6 +26,14 @@ path:hover {
 .bluejay {
   background: #134a8e;
   color:#f8dc6c;
+}
+
+.App-header-bluejay {
+  background: #113561;
+}
+
+.App-header-goldfinch {
+  background: #fac72b;
 }
 
 .burb-logo {
