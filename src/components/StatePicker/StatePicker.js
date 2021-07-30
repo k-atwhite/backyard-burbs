@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './StatePicker.css';
 import USAMap from 'react-usa-map';
