@@ -4,23 +4,23 @@ import './StatePicker.css';
 import USAMap from 'react-usa-map';
 
 const StatePicker = (props) => {
-  const [value, setValue] = useState('')
+  // const [value, setValue] = useState('')
 
   const handleChange = (event) => {
     // setValue(event.target.value)
     // clearValue()
-    setValue(event.target.dataset.name)
+    // setValue(event.target.dataset.name)
     
-    event.preventDefault();
-    props.clearBirds();
-    // props.setBirds(value);
-    console.log("name", event.target.dataset.name)
-    console.log(value, 'value')
+    // event.preventDefault();
+    // props.clearBirds();
+    console.log(event.target.dataset.name)
+    props.clearBirds()
+    props.setBirds(event.target.dataset.name);
   }
 
-  const clearValue = () => {
-    setValue('')
-  }
+  // const clearValue = () => {
+  //   setValue('')
+  // }
   // const handleSubmit = (event) => {
   //   event.preventDefault();
   //   props.clearBirds();
