@@ -1,6 +1,5 @@
 nav {
   font-family: "Chelsea Market", cursive;
-  color: #f8dc6c;
   display: flex;
   justify-content: space-evenly;
   margin: 0px 10px 0px 10px;
@@ -18,4 +17,12 @@ nav {
   color: #f8dc6c;;
 }
 
+.goldfinch-text {
+  color:#134a8e;
+  background: none;
+}
 
+.bluejay-text {
+  color: #f8dc6c;
+  background: none;
+}

@@ -2,22 +2,20 @@ import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import ThemeContext from "../ThemeContext";
 import React, { useContext } from "react";
-// import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const NavBar = () => {
-  const value = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <nav>
-      <NavLink to="/" className={`nav-link ${value.theme}`}>
+      <NavLink to="/" className={`nav-link ${theme}-text`}>
         Choose State
       </NavLink>
-      <NavLink to="/birds" className={`nav-link ${value.theme}`}>
+      <NavLink to="/birds" className={`nav-link ${theme}-text`}>
         List of Birds
       </NavLink>
-      <NavLink to="/myBirds" className={`nav-link ${value.theme}`}>
+      <NavLink to="/myBirds" className={`nav-link ${theme}-text`}>
         My Birds
       </NavLink>
-      {/* <ThemeToggle /> */}
     </nav>
   );
 };
