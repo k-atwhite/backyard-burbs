@@ -5,7 +5,7 @@ import { getImages } from '../../apiCalls';
 import ThemeContext from "../ThemeContext";
 
 const Bird = ({ commonName, scientificName, id }) => {
-  const value = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const [photos, setPhotos] = useState([]);
 
   const createURL = (photo) => {
@@ -32,9 +32,9 @@ const Bird = ({ commonName, scientificName, id }) => {
   return (
     <Link to={`/birds/${id}`}>
       <div
-      className={`bird-card ${value}`}
+      className={'bird-card'}
       style={{backgroundImage: `url('${photos}')`}}>
-        <h3 className='card-text'>{commonName}</h3>
+        <h3 className={`card-text ${theme}`}>{commonName}</h3>
       </div>
     </Link>
   );

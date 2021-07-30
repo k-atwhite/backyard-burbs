@@ -23,3 +23,13 @@
 h3 {
   margin: 0;
 }
+
+.goldfinch {
+  background: #f8dc6c;
+  color:#134a8e;
+}
+
+.bluejay {
+  background: #134a8e;
+  color:#f8dc6c;
+}
