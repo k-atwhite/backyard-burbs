@@ -11,17 +11,19 @@
 .card-text {
   position: relative;
   text-align: center;
-  top: 15vw;
-  left: 1.1vw;
-  width: 20vw;
-  padding: 0.6vw;
+  bottom: -14.5vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
   color: black;
   background: white;
   border-radius: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
 }
 
 h3 {
   margin: 0;
+  font-size: 80%;
 }
 
 .goldfinch {
