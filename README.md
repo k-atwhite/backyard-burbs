@@ -15,6 +15,8 @@ Backyard Burbs is our "Stretch Tech Challenge" in Mod 3 of Turing School's Front
 We soon found that our app was not complicated enough to warrant using context for our essentail data management. However! It is a powerful tool to simply creating a light and dark theme that persists across all components. We called our theme Goldfinch/Bluejay and we hope you enjoy the charming chirp when you toggle your theme!
 
 The app itself is desinged to be a fun and colorful tool for children to begin identifying the birds in their backyard. You begin on a page showing a map of the USA. Please choose your state and then you will be guided to a list of the birds in your area. Simply click on the bird you believe you see, and you'll find more details such as: more images, the scientific name, the last time that bird was seen, and how many were seen. Click the binoculars and add that bird to your own list!
+
+<p align="center"><img src=https://media.giphy.com/media/64fhy6Uz6XfwsHCwAp/giphy.gif ></p>
  
 ## Table of Contents
 
@@ -38,8 +40,8 @@ The app itself is desinged to be a fun and colorful tool for children to begin i
 </table>
 
 # Special Thanks to:
-- Becca Phillips for designing our bird logo!
-- [BBC Sound Effects](https://sound-effects.bbcrewind.co.uk/) for our chirp
+- Becca Phillips for designing our burb logo
+- [BBC Sound Effects](https://sound-effects.bbcrewind.co.uk/) for our chirp audio
 - Flaticon for the cute binoculars
 
 
