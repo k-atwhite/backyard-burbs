@@ -30,7 +30,7 @@ const App = () => {
     setMyBirds([seenBird, ...myBirds]);
   };
 
-  const loadingMsg = !regionBirds.length && <h2>Loading your birds...</h2>;
+  const loadingMsg = !regionBirds.length && !error.length && <h2>Loading your birds...</h2>;
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
