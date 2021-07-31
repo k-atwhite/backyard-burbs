@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "../NavBar/NavBar";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
 import StatePicker from "../StatePicker/StatePicker";
 import BirdList from "../BirdList/BirdList";
@@ -66,6 +66,7 @@ const App = () => {
             <StatePicker setBirds={setBirds} clearBirds={clearBirds} />
           </Route>
         </Switch>
+        <Redirect to={'/'} />
       </div>
     </ThemeContext.Provider>
   );
