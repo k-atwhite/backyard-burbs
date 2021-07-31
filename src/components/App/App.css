@@ -6,7 +6,12 @@
 h1 {
   font-family: "Chelsea Market", cursive;
   margin: 0;
-  padding: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+header {
+  height: ;
 }
 
 path {
@@ -37,7 +42,7 @@ path:hover {
 }
 
 .burb-logo {
-  height: 13vh;
+  height: 10vh;
 }
 
 .hidden {
