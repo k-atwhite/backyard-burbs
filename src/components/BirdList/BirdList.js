@@ -4,14 +4,16 @@ import Bird from "../Bird/Bird";
 
 const BirdList = ({ birdData }) => {
   const regionalBirds = birdData.map(bird => {
-    return (
-      <Bird
+    if (!bird.comName.includes('hybrid')) {
+      return (
+        <Bird
         commonName={bird.comName}
         scientificName={bird.sciName}
         id={bird.speciesCode}
         key={bird.speciesCode}
-      />
-    );
+        />
+      );
+    }
   });
 
   return (
