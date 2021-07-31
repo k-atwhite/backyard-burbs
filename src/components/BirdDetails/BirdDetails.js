@@ -51,10 +51,19 @@ const BirdDetails = ({ bird, addBird }) => {
       </div>
       <div className="bird-details">
         <div className="bird-words">
-          <h3>Common Name: {bird.comName}</h3>
-          <p>Scientific Name: {bird.sciName}</p>
-          <p>Last seen on: {bird.obsDt}</p>
-          <p>How many? {bird.howMany}</p>
+          <p>
+            <strong>Common Name:</strong> {bird.comName}
+          </p>
+          <p>
+            <strong>Scientific Name:</strong> {bird.sciName}
+          </p>
+          <p>
+            <strong>Last seen on:</strong>
+            {bird.obsDt}
+          </p>
+          <p>
+            <strong>How many?</strong> {bird.howMany} !
+          </p>
         </div>
         <div className="binoculars-container">
           <Link to="/myBirds">
