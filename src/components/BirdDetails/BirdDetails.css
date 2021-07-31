@@ -6,19 +6,26 @@
 
 .binoculars-container {
   background-color: white;
-  width: 13vw;
-  height: 13vw;
+  width: 13.5vw;
+  height: 13.5vw;
   border-radius: 50%;
+}
+
+.binoculars-container:hover {
+  transform: scale(1.1);
+  border: 2px dotted darkgreen;
 }
 
 .bird-detail-container {
   display: flex;
   flex-direction: column;
+  margin-top: 1vw;
 }
 
 .bird-details {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 3vw;
 }
 
 .bird-detail-image {
