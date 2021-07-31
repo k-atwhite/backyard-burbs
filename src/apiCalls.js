@@ -1,5 +1,3 @@
-import { dateFormatter } from "./utilities";
-
 const myHeaders = new Headers();
 myHeaders.append("X-eBirdApiToken", "cbf0pmjd3n1t");
 const requestOptions = {
