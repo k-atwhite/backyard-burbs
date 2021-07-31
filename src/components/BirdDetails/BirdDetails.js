@@ -21,8 +21,7 @@ const BirdDetails = ({ bird, addBird }) => {
     return photoUrl;
   };
 
-  getImages(bird.sciName, 3)
-    .then((data) => {
+  getImages(bird.sciName, 3).then((data) => {
     if (!photos.length) {
       const url = data.photos.photo.map((photo) => {
         return createURL(photo);
@@ -34,9 +33,21 @@ const BirdDetails = ({ bird, addBird }) => {
   return (
     <div className="bird-detail-container">
       <div className="bird-detail-images">
-        <img src={photos[0]} className="bird-detail-image" />
-        <img src={photos[1]} className="bird-detail-image" />
-        <img src={photos[2]} className="bird-detail-image" />
+        <img
+          src={photos[0]}
+          alt={`${bird.comName} 1`}
+          className="bird-detail-image"
+        />
+        <img
+          src={photos[1]}
+          alt={`${bird.comName} 2`}
+          className="bird-detail-image"
+        />
+        <img
+          src={photos[2]}
+          alt={`${bird.comName} 3`}
+          className="bird-detail-image"
+        />
       </div>
       <div className="bird-details">
         <div className="bird-words">
