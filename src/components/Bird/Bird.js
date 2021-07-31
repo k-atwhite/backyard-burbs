@@ -7,6 +7,7 @@ import ThemeContext from "../ThemeContext";
 const Bird = ({ commonName, scientificName, id }) => {
   const { theme } = useContext(ThemeContext);
   const [photos, setPhotos] = useState([]);
+  const [error, setError] = useState('');
 
   const createURL = (photo) => {
     let photoURL;
@@ -27,10 +28,14 @@ const Bird = ({ commonName, scientificName, id }) => {
       const url = createURL(data.photos.photo[0])
       setPhotos(url)
     }
-  });
+  })
+  .catch(() => setError("Please try again later!"))
+  ;
 
   return (
     <Link to={`/birds/${id}`}>
+      {!!error.length && 
+            <h2>{error}</h2>}
       <div
       className={'bird-card'}
       style={{backgroundImage: `url('${photos}')`}}>

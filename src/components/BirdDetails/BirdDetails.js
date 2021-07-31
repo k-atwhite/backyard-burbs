@@ -2,11 +2,10 @@ import "./BirdDetails.css";
 import binoculars from "../../resources/binoculars.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import ThemeContext from "../ThemeContext";
 import { getImages } from "../../apiCalls";
 
 const BirdDetails = ({ bird, addBird }) => {
-  const [newBird, setNewBird] = useState(bird);
+  const [newBird] = useState(bird);
   const [photos, setPhotos] = useState([]);
 
   const createURL = (photo) => {
@@ -22,7 +21,8 @@ const BirdDetails = ({ bird, addBird }) => {
     return photoUrl;
   };
 
-  getImages(bird.sciName, 3).then((data) => {
+  getImages(bird.sciName, 3)
+    .then((data) => {
     if (!photos.length) {
       const url = data.photos.photo.map((photo) => {
         return createURL(photo);

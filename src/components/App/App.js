@@ -14,9 +14,12 @@ const App = () => {
   const [regionBirds, setRegionBirds] = useState([]);
   const [myBirds, setMyBirds] = useState([]);
   const [theme, setTheme] = useState("goldfinch");
+  const [error, setError] = useState('');
 
   const setBirds = (stateAbv) => {
-    getBirds(stateAbv).then((data) => setRegionBirds(data));
+    getBirds(stateAbv)
+    .then((data) => setRegionBirds(data))
+    .catch(()=> setError("We're experiencing server technical difficulties, please check back again later!"));
   };
 
   const clearBirds = () => {
@@ -27,7 +30,7 @@ const App = () => {
     setMyBirds([seenBird, ...myBirds]);
   };
 
-  const loadingMsg = !regionBirds.length && <h2>Loading your birds...</h2>;
+  const loadingMsg = !regionBirds.length && !error.length && <h2>Loading your birds...</h2>;
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
@@ -57,6 +60,8 @@ const App = () => {
           ></Route>
           <Route path="/birds">
             {loadingMsg}
+            {!!error.length && 
+            <h2>{error}</h2>}
             <BirdList birdData={regionBirds} />
           </Route>
           <Route path="/myBirds">
