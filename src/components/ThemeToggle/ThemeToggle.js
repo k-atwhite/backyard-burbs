@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import ThemeContext from "../ThemeContext";
 import "./ThemeToggle.css";
-import chirp from "./chirp.mp3";
+import chirp from "../../resources/chirp.mp3";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);

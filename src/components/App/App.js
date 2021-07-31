@@ -66,7 +66,7 @@ const App = () => {
             <StatePicker setBirds={setBirds} clearBirds={clearBirds} />
           </Route>
         </Switch>
-        <Redirect to={'/'} />
+        <Redirect to={"/"} />
       </div>
     </ThemeContext.Provider>
   );

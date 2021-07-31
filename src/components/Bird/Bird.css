@@ -2,10 +2,10 @@
   box-sizing: border-box;
   border-radius: 2vw;
   height: 18vw;
-  position:relative;
-  background:url() 10% 10% no-repeat;
-  background-size:cover;
-  background-clip:content-box;
+  position: relative;
+  background: url() 10% 10% no-repeat;
+  background-size: cover;
+  background-clip: content-box;
 }
 
 .card-text {
@@ -26,10 +26,10 @@ h3 {
 
 .goldfinch {
   background: #f8dc6c;
-  color:#134a8e;
+  color: #134a8e;
 }
 
 .bluejay {
   background: #134a8e;
-  color:#f8dc6c;
+  color: #f8dc6c;
 }
