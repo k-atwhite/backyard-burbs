@@ -5,20 +5,29 @@ nav {
   margin: 0px 10px 0px 10px;
 }
 
+.nav-link {
+  font-size: 120%;
+}
+
+.selected-link {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+
 .nav-link:hover {
   transform: scale(1.1);
 }
 
 .goldfinch {
-  color:#134a8e;
+  color: #134a8e;
 }
 
 .bluejay {
-  color: #f8dc6c;;
+  color: #f8dc6c;
 }
 
 .goldfinch-text {
-  color:#134a8e;
+  color: #134a8e;
   background: none;
 }
 

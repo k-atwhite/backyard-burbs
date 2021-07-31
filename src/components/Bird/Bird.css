@@ -2,34 +2,36 @@
   box-sizing: border-box;
   border-radius: 2vw;
   height: 18vw;
-  position:relative;
-  background:url() 10% 10% no-repeat;
-  background-size:cover;
-  background-clip:content-box;
+  position: relative;
+  background: url() 10% 10% no-repeat;
+  background-size: cover;
+  background-clip: content-box;
 }
 
 .card-text {
   position: relative;
   text-align: center;
-  top: 15vw;
-  left: 1.1vw;
-  width: 20vw;
-  padding: 0.6vw;
+  bottom: -14.5vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
   color: black;
   background: white;
   border-radius: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
 }
 
 h3 {
   margin: 0;
+  font-size: 80%;
 }
 
 .goldfinch {
   background: #f8dc6c;
-  color:#134a8e;
+  color: #134a8e;
 }
 
 .bluejay {
   background: #134a8e;
-  color:#f8dc6c;
+  color: #f8dc6c;
 }

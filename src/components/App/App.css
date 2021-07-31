@@ -6,7 +6,13 @@
 h1 {
   font-family: "Chelsea Market", cursive;
   margin: 0;
-  padding: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.us-state-map {
+  height: 37vw;
+  padding-top: 2vw;
 }
 
 path {
@@ -37,7 +43,7 @@ path:hover {
 }
 
 .burb-logo {
-  height: 13vh;
+  height: 10vh;
 }
 
 .hidden {

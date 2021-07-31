@@ -13,13 +13,26 @@ const NavBar = ({ birdData }) => {
   };
   return (
     <nav>
-      <NavLink to="/" className={`nav-link ${theme}-text`}>
+      <NavLink
+        exact
+        to="/"
+        className={`nav-link ${theme}-text`}
+        activeClassName="selected-link"
+      >
         Choose State
       </NavLink>
-      <NavLink to="/birds" className={`nav-link ${theme}-text ${hideList()}`}>
+      <NavLink
+        to="/birds"
+        className={`nav-link ${theme}-text ${hideList()}`}
+        activeClassName="selected-link"
+      >
         List of Birds
       </NavLink>
-      <NavLink to="/myBirds" className={`nav-link ${theme}-text`}>
+      <NavLink
+        to="/myBirds"
+        className={`nav-link ${theme}-text`}
+        activeClassName="selected-link"
+      >
         My Birds
       </NavLink>
     </nav>

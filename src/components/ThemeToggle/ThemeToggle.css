@@ -60,5 +60,5 @@ input:checked + .slider:before {
 .toggle {
   position: absolute;
   top: 2vw;
-  right: 1vw;
+  right: 3vw;
 }
