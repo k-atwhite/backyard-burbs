@@ -12,34 +12,35 @@
   
 Backyard Burbs is our "Stretch Tech Challenge" in Mod 3 of Turing School's Frontend program. We had the opportunity to choose a new technology to self-study and implement. Based on personal interest and suggestions from our mentors we chose to learn Context - a Global Variable Manager. Along with hooks, context is a powerful tool to simplify how data is passed to nested components. 
 
-We soon found that our app was not complicated enough to warrant using context for our essentail data management. However! It is a powerful tool to simply creating a light and dark theme that persists across all components. We called our theme Goldfinch/Bluejay and we hope you enjoy the charming chirp when you toggle your theme!
+We soon found that our app was not complicated enough to warrant using context for our essentail data management. However! It is a powerful tool to simplify creating a light and dark theme that persists across all components. We called our theme Goldfinch/Bluejay and we hope you enjoy the charming chirp when you toggle your theme!
 
 The app itself is desinged to be a fun and colorful tool for children to begin identifying the birds in their backyard. You begin on a page showing a map of the USA. Please choose your state and then you will be guided to a list of the birds in your area. Simply click on the bird you believe you see, and you'll find more details such as: more images, the scientific name, the last time that bird was seen, and how many were seen. Click the binoculars and add that bird to your own list!
+A few design considerations we prioritized were: simplicty, large and responsive buttons, and color.
+
+## [View Our App Here]()
 
 <p align="center"><img src=https://media.giphy.com/media/64fhy6Uz6XfwsHCwAp/giphy.gif ></p>
  
 ## Table of Contents
 
-- [Contributors]()
-- [Learning Goals]()
-- [Project Overview]()
-- [How to use the app]()
-- [Technologies Used]()
-- [Future Additions]()
+- [Contributors](https://github.com/k-atwhite/backyard-burbs#contributors)
+- [Learning Goals](https://github.com/k-atwhite/backyard-burbs#learning-goals)
+- [How to use the app](https://github.com/k-atwhite/backyard-burbs#app-setup)
+- [Future Additions](https://github.com/k-atwhite/backyard-burbs#future-additions--reflections)
  
 ## Contributors
 <table>
   <tr>
-    <td> <a href="https://github.com/sydnerd">Sydney Bear</td>
-    <td> <a href="https://github.com/lkessell">Lauren Kessell</td>
-    <td> <a href="https://github.com/k-atwhite">Kat White</td>
+    <td align="center" > <a href="https://github.com/sydnerd">Sydney Bear</td>
+    <td align="center"> <a href="https://github.com/lkessell">Lauren Kessell</td>
+    <td align="center"> <a href="https://github.com/k-atwhite">Kat White</td>
   </tr>
     <td><img src="https://avatars.githubusercontent.com/u/78241098?v=4" alt='Sydney GH image' width="150" height="auto" /></td>
     <td><img src="https://avatars.githubusercontent.com/u/77205456?v=4" alt="Lauren GH image" width="150" height="auto" /></td>
     <td><img src="https://avatars.githubusercontent.com/u/49215782?v=4" alt="Kat GH image" width="150" height="auto" /></td>
 </table>
 
-# Special Thanks to:
+### Special Thanks to:
 - Becca Phillips for designing our burb logo
 - [BBC Sound Effects](https://sound-effects.bbcrewind.co.uk/) for our chirp audio
 - Flaticon for the cute binoculars
@@ -56,7 +57,9 @@ The app itself is desinged to be a fun and colorful tool for children to begin i
 
 ## App Setup
 
-In the new Terminal window, run the following commands:  
+In the new Terminal window, run the following commands:
+
+
 `git clone git@github.com:k-atwhite/backyard-burbs.git`  
 `cd backyard-burbs`  
 `npm install`  
