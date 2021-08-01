@@ -46,5 +46,12 @@ describe("Regional Bird List", () => {
     });
   });
 
+  it("Should show an error message if bird data cannot be fetched", () => {
+    cy.intercept("https://api.ebird.org/v2/data/obs/US-CO/recent", { statusCode: 500 });
+    cy.visit("http://localhost:3000/");
+    cy.get("path[class='CO state']").click();
+    cy.contains("We're experiencing server technical difficulties, please check back again later!");
+  });
+
   // it("Each card should clickable to then display that birds details", () => {});
 });
