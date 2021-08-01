@@ -25,11 +25,26 @@ describe("Regional Bird List", () => {
     cy.get(".bird-card").contains("Roseate Spoonbill")
   });
 
-  // it("Should contain cards with the common name and latin name", () => {
-  //   // add in dummy data! Sydney will show us fixtures!
-  //   cy.get("bird-card").contains("sci-name");
-  //   get("bird-card").contains("common-name");
-  // });
-  //
+  it("Should show a loading message while data is being fetched", () => {
+    let sendResponse;
+    const trigger = new Promise(resolve => {
+      sendResponse = resolve;
+    });
+
+    cy.fixture("birdListMockData").then((listData) => {
+      cy.intercept("https://api.ebird.org/v2/data/obs/US-CO/recent", (request) => {
+        return trigger.then(() => {
+          request.reply(listData);
+        });
+      });
+      cy.visit("http://localhost:3000/");
+      cy.get("path[class='CO state']").click();
+      cy.contains("Loading your birds").then(() => {
+        sendResponse();
+        cy.get(".bird-card").contains("Roseate Spoonbill")
+      })
+    });
+  });
+
   // it("Each card should clickable to then display that birds details", () => {});
 });
