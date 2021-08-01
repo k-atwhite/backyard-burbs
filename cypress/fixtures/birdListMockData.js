@@ -44,4 +44,4 @@
     locationPrivate: false,
     subId: "S63615092",
   },
-];
+]

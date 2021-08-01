@@ -37,8 +37,9 @@ const Bird = ({ commonName, scientificName, id }) => {
     <Link to={`/birds/${id}`}>
       {!!error.length &&
             <h2>{error}</h2>}
-      <div
-      className={'bird-card'}
+      <div 
+      id={`${id}`}
+      className={`bird-card`}
       style={{backgroundImage: `url('${photos}')`}}>
         <h3 className={`card-text ${theme}`}>{commonName}</h3>
       </div>

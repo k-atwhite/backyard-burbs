@@ -20,21 +20,27 @@ beforeEach(() => {
       sparrow
     );
   });
-  cy.visit("http://localhost:3000/");
-  cy.get("path[class='CO state']").click();
+  cy.visit("http://localhost:3000/")
+    .get("path[class='CO state']")
+    .click()
+    .get("#whbnut").click();
 });
 
 describe("Bird Details", () => {
   it("Should visit the url with the specific bird key", () => {
-    cy.get();
+    cy.url().should("include", "/whbnut");
   });
 
   it("Should contain three images of that bird", () => {
-    cy.get("img").should("have.length", 3);
+    cy.get(".bird-detail-image").should("have.length", 3);
   });
 
   it("Should contain details about the bird", () => {
-    cy.get(".bird-details").should("include.text", "Common Name:");
+    cy.get(".bird-details").should("include.text", "Common Name:")
+    cy.get(".bird-details").should("include.text", "Scientific Name")
+    cy.get(".bird-details").should("include.text", "Last seen on:")
+    cy.get("strong").should("include.text", "How many?")
+    ;
   });
 
   it("Should have an I SAW IT! button", () => {
