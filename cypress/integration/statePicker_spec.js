@@ -38,9 +38,8 @@ describe("State Picker", () => {
     cy.get(".bird-card").contains('Eurasian Tree Sparrow');
   });
 
-  // it("Should direct user to list of all birds after clicking submit", () => {
-  //   cy.get("button").click();
-  //   // I THINK I NEED TO CHOOSE A STATE
-  //   // AND THEN MAKE SURE THE URL MATCHES
-  // });
+  it("The URL should change after choosing a state", () => {
+    cy.get("path[class='CO state']").click();
+    cy.url().should("include", "/birds")
+  });
 });
