@@ -3,6 +3,7 @@ import "./Bird.css";
 import { Link } from "react-router-dom";
 import { getImages } from '../../apiCalls';
 import ThemeContext from "../ThemeContext";
+import PropTypes from "prop-types";
 
 const Bird = ({ commonName, scientificName, id }) => {
   const { theme } = useContext(ThemeContext);
@@ -34,7 +35,7 @@ const Bird = ({ commonName, scientificName, id }) => {
 
   return (
     <Link to={`/birds/${id}`}>
-      {!!error.length && 
+      {!!error.length &&
             <h2>{error}</h2>}
       <div
       className={'bird-card'}
@@ -46,3 +47,9 @@ const Bird = ({ commonName, scientificName, id }) => {
 };
 
 export default Bird;
+
+Bird.propTypes = {
+  commonName: PropTypes.string,
+  scientificName: PropTypes.string,
+  id: PropTypes.string
+}
