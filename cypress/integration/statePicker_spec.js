@@ -31,6 +31,13 @@ describe("State Picker", () => {
     cy.get(".nav-link").contains("List of Birds").should("not.be.visible");
   });
 
+  it("Should be able to click a state, and view a list of birds", () => {
+    cy.get("path[class='CO state']").click();
+    cy.get(".bird-card").contains('Roseate Spoonbill');
+    cy.get(".bird-card").contains('White-breasted Nuthatch');
+    cy.get(".bird-card").contains('Eurasian Tree Sparrow');
+  });
+
   // it("Should direct user to list of all birds after clicking submit", () => {
   //   cy.get("button").click();
   //   // I THINK I NEED TO CHOOSE A STATE
