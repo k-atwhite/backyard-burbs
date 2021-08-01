@@ -20,9 +20,8 @@ describe("my-birds", () => {
       it("Should contain a bird card when I see it button is clicked", () => {
         cy.get('#whbnut')
       });
-      it("Should have an image, and a common name", () => {
-        cy.get('#whbnut')
+      it("Should a common name text and an image", () => {
+        cy.get('#whbnut').should('have.css','background-image')
           .get('.card-text').contains('White-breasted Nuthatch')
-          .get()
       })
 })
