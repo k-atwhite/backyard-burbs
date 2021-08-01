@@ -68,7 +68,7 @@ const BirdDetails = ({ bird, addBird }) => {
         </div>
         <div className="binoculars-container">
           <Link to="/myBirds">
-            <div onClick={() => addBird(newBird)}>
+            <div className ="i-see-it" onClick={() => addBird(newBird)}>
               <img className="binoculars" src={binoculars} alt="binoculars" />
               <p className="binoc-text">I see it!</p>
             </div>
