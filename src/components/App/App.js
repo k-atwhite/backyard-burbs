@@ -31,7 +31,9 @@ const App = () => {
   };
 
   const addBird = (seenBird) => {
-    setMyBirds([seenBird, ...myBirds]);
+    if (!myBirds.includes(seenBird)) {
+      setMyBirds([seenBird, ...myBirds]);
+    }
   };
 
   const loadingMsg = !regionBirds.length && !error.length && (
