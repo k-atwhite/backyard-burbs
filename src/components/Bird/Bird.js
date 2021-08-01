@@ -38,6 +38,7 @@ const Bird = ({ commonName, scientificName, id }) => {
       {!!error.length &&
             <h2>{error}</h2>}
       <div
+      id={`${id}`}
       className={'bird-card'}
       style={{backgroundImage: `url('${photos}')`}}>
         <h3 className={`card-text ${theme}`}>{commonName}</h3>

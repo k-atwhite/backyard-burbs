@@ -1,5 +1,5 @@
-{
-  "birdData": [
+
+ [
     {
       "speciesCode": "whbnut",
       "comName": "White-breasted Nuthatch",
@@ -46,4 +46,3 @@
       "subId": "S63615092"
     },
   ]
-}
