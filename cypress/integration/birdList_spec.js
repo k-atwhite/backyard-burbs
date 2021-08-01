@@ -21,8 +21,10 @@ beforeEach(() => {
 
 describe("Regional Bird List", () => {
   it("Bird cards should show an image and the bird's common name", () => {
-    cy.get(".bird-card").should("have.css", "background-image")
-    cy.get(".bird-card").contains("Roseate Spoonbill")
+    cy.get("#rosspo1").should("have.css", "background-image", 'url("https://live.staticflickr.com/65535/46696532865_d3064fb8bb_b.jpg")');
+    cy.get("#rosspo1").contains("Roseate Spoonbill");
+    cy.get("#whbnut").should("have.css", "background-image", 'url("https://live.staticflickr.com/4502/24112610958_a75bcf9952_b.jpg")');
+    cy.get("#whbnut").contains("White-breasted Nuthatch");
   });
 
   it("Should show a loading message while data is being fetched", () => {
@@ -41,7 +43,7 @@ describe("Regional Bird List", () => {
       cy.get("path[class='CO state']").click();
       cy.contains("Loading your birds").then(() => {
         sendResponse();
-        cy.get(".bird-card").contains("Roseate Spoonbill")
+        cy.get("#rosspo1").contains("Roseate Spoonbill")
       })
     });
   });
