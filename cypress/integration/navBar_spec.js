@@ -24,6 +24,6 @@ describe("Navigation Bar", () => {
     cy.get("NavLink")
       .contains("My Birds")
       .click()
-      .url("http://localhost:3000/seen");
+      .url("http://localhost:3000/myBirds");
   });
 });
