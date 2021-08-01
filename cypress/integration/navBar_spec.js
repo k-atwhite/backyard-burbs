@@ -20,7 +20,13 @@ describe("Navigation Bar", () => {
       .url("http://localhost:3000/myBirds");
   });
 
-  // it("Should contain the title of the app", () => {
-  //   cy.get()
-  // })
+  it("Should have a title", () => {
+    cy.get("header")
+      .contains("Backyard Burbs")
+  });
+  
+  it("Should have a bird image", () => {
+    cy.get("header")
+    .get(".burb-logo").should('exist').should('be.visible')
+  })
 });
