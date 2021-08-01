@@ -53,5 +53,12 @@ describe("Regional Bird List", () => {
     cy.contains("We're experiencing server technical difficulties, please check back again later!");
   });
 
-  // it("Each card should clickable to then display that birds details", () => {});
+  it("Should show an error message if bird images cannot be fetched", () => {
+    cy.intercept("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50906f9c24e50a02f0d6034a3c6df6d7&per_page=1&format=json&nojsoncallback=1&sort=relevance&text=Sitta%20carolinensis%20bird", { statusCode: 500 });
+    cy.intercept("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50906f9c24e50a02f0d6034a3c6df6d7&per_page=1&format=json&nojsoncallback=1&sort=relevance&text=Platalea%20ajaja%20bird", { statusCode: 500 });
+    cy.intercept("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50906f9c24e50a02f0d6034a3c6df6d7&per_page=1&format=json&nojsoncallback=1&sort=relevance&text=Passer%20montanus%20bird", { statusCode: 500 });
+    cy.visit("http://localhost:3000/");
+    cy.get("path[class='CO state']").click();
+    cy.contains("Please try again later!");
+  });
 });
