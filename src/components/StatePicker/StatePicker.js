@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './StatePicker.css';
 import USAMap from 'react-usa-map';
+import PropTypes from "prop-types";
 
 const StatePicker = (props) => {
   const handleChange = (event) => {
@@ -16,3 +17,8 @@ const StatePicker = (props) => {
 }
 
 export default StatePicker;
+
+StatePicker.propTypes = {
+  setBirds: PropTypes.func,
+  clearBirds: PropTypes.func
+}

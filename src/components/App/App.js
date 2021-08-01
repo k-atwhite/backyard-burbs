@@ -7,7 +7,7 @@ import BirdList from "../BirdList/BirdList";
 import { getBirds } from "../../apiCalls";
 import BirdDetails from "../BirdDetails/BirdDetails";
 import ThemeContext from "../ThemeContext";
-import burb from "./burb.png";
+import burb from "../../resources/burb.png";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const App = () => {
