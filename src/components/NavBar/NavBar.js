@@ -2,6 +2,7 @@ import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import ThemeContext from "../ThemeContext";
 import React, { useContext } from "react";
+import PropTypes from 'prop-types';
 
 const NavBar = ({ birdData }) => {
   const { theme } = useContext(ThemeContext);
@@ -40,3 +41,7 @@ const NavBar = ({ birdData }) => {
 };
 
 export default NavBar;
+
+NavBar.propTypes = {
+  birdData: PropTypes.array
+};

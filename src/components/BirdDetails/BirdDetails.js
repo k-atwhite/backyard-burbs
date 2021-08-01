@@ -3,6 +3,7 @@ import binoculars from "../../resources/binoculars.svg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { getImages } from "../../apiCalls";
+import PropTypes from 'prop-types';
 
 const BirdDetails = ({ bird, addBird }) => {
   const [newBird] = useState(bird);
@@ -58,7 +59,7 @@ const BirdDetails = ({ bird, addBird }) => {
             <strong>Scientific Name:</strong> {bird.sciName}
           </p>
           <p>
-            <strong>Last seen on:</strong>
+            <strong>Last seen on: </strong>
             {bird.obsDt}
           </p>
           <p>
@@ -79,3 +80,8 @@ const BirdDetails = ({ bird, addBird }) => {
 };
 
 export default BirdDetails;
+
+BirdDetails.propTypes = {
+  bird: PropTypes.object,
+  addBird: PropTypes.func
+}

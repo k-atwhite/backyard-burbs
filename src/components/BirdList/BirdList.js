@@ -1,6 +1,7 @@
 import React from "react";
 import "./BirdList.css";
 import Bird from "../Bird/Bird";
+import PropTypes from "prop-types";
 
 const BirdList = ({ birdData }) => {
   const regionalBirds = birdData.map((bird) => {
@@ -20,3 +21,7 @@ const BirdList = ({ birdData }) => {
 };
 
 export default BirdList;
+
+BirdList.propTypes = {
+  birdData: PropTypes.array
+};
