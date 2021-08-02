@@ -2,7 +2,6 @@
 
 ## Project Overview
 
-
   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
   ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -20,9 +19,12 @@ A few design considerations we prioritized were: simplicty, large and responsive
 ## [View Our App Here!](https://k-atwhite.github.io/backyard-burbs/)
 
 <p align="center"><img src=https://media.giphy.com/media/64fhy6Uz6XfwsHCwAp/giphy.gif ></p>
-<!-- <p align="center"><img src=MOBILE ></p>
-<p align="center"><img src=TABLET ></p> -->
 
+<p align="center"><img src=https://user-images.githubusercontent.com/49215782/127909136-09a5da19-feb6-4ce6-b99b-15444d30a19b.png
+ ></p>
+<p align="center"><img src=https://user-images.githubusercontent.com/49215782/127909140-3a314a29-deff-43b7-9f96-c7182a13cc3f.png
+
+<br>
 
  
 ## Table of Contents
