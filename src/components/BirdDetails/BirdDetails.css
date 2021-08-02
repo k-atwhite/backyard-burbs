@@ -41,3 +41,25 @@
 }
 
 
+@media screen and (max-width: 620px) and (orientation: portrait) {
+  .bird-detail-image {
+    height: 35vw;
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  .binoculars {
+    max-width: 15vw;
+    max-height: 15vw;
+    text-decoration: none;
+  } 
+
+
+  .binoculars-container {
+  background-color: white;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+}
+}
+
