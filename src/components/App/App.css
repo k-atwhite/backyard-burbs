@@ -5,6 +5,7 @@
 
 h1 {
   font-family: "Chelsea Market", cursive;
+  font-size: 5vw;
   margin: 0;
   padding-top: 1vw;
   padding-bottom: 1vw;
@@ -34,4 +35,18 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+/* Small Tablet Styling */
+@media screen and (max-width: 620px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 }
