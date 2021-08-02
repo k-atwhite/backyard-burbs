@@ -1,28 +1,45 @@
 beforeEach(() => {
+  cy.fixture("birdListMockData").then((listData) => {
+    cy.intercept("https://api.ebird.org/v2/data/obs/US-CO/recent", listData);
+  });
+
+  cy.fixture("nuthatchImageMockData").then((nuthatch) => {
+    cy.intercept("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50906f9c24e50a02f0d6034a3c6df6d7&per_page=1&format=json&nojsoncallback=1&sort=relevance&text=Sitta%20carolinensis%20bird", nuthatch);
+  });
+
+  cy.fixture("spoonbillImageMockData").then((spoonbill) => {
+    cy.intercept("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50906f9c24e50a02f0d6034a3c6df6d7&per_page=1&format=json&nojsoncallback=1&sort=relevance&text=Platalea%20ajaja%20bird", spoonbill);
+  });
+
+  cy.fixture("treeSparrowImageMockData").then((sparrow) => {
+    cy.intercept("https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=50906f9c24e50a02f0d6034a3c6df6d7&per_page=1&format=json&nojsoncallback=1&sort=relevance&text=Passer%20montanus%20bird", sparrow);
+  });
+
   cy.visit("http://localhost:3000/");
 });
 
 describe("State Picker", () => {
-  it("Should visit the home page", () => {
-    cy.contains("Backyard Burbs");
+  it("A map of the US should be visible on the home page", () => {
+    cy.get(".us-state-map").should("be.visible");
   });
 
-  it("Should show a drop down form", () => {
-    cy.get(".form").should("be.visible");
+  it("The Choose State nav link should be active", () => {
+    cy.contains(".nav-link", "Choose State").should("have.class", "selected-link");
   });
 
-  it("Should show all 50 states", () => {
-    // Change to options are length of 50 - something like that
-    cy.get("option[value=AK]").get("option[value=WY]");
+  it("The List of Birds nav link should not be visible", () => {
+    cy.get(".nav-link").contains("List of Birds").should("not.be.visible");
   });
 
-  it("Should have a submit button", () => {
-    cy.get("button").contains("Submit");
+  it("Should be able to click a state, and view a list of birds", () => {
+    cy.get("path[class='CO state']").click();
+    cy.get(".bird-card").contains('Roseate Spoonbill');
+    cy.get(".bird-card").contains('White-breasted Nuthatch');
+    cy.get(".bird-card").contains('Eurasian Tree Sparrow');
   });
 
-  it("Should direct user to list of all birds after clicking submit", () => {
-    cy.get("button").click();
-    // I THINK I NEED TO CHOOSE A STATE
-    // AND THEN MAKE SURE THE URL MATCHES
+  it("The URL should change after choosing a state", () => {
+    cy.get("path[class='CO state']").click();
+    cy.url().should("include", "/birds")
   });
 });
