@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { getImages } from '../../apiCalls';
 import ThemeContext from "../ThemeContext";
 import PropTypes from "prop-types";
+import noImgBurb from "../../resources/no-img-burb.png"
 
 const Bird = ({ commonName, scientificName, id }) => {
   const { theme } = useContext(ThemeContext);
@@ -17,7 +18,7 @@ const Bird = ({ commonName, scientificName, id }) => {
       photoURL = 'https://live.staticflickr.com/' + photo.server + '/' +
       photo.id + '_' + photo.secret + '_b.jpg';
     } else {
-      photoURL = 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png';
+      photoURL = noImgBurb;
     }
 
     return photoURL;
