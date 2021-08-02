@@ -20,6 +20,10 @@ A few design considerations we prioritized were: simplicty, large and responsive
 ## [View Our App Here!](https://k-atwhite.github.io/backyard-burbs/)
 
 <p align="center"><img src=https://media.giphy.com/media/64fhy6Uz6XfwsHCwAp/giphy.gif ></p>
+<!-- <p align="center"><img src=MOBILE ></p>
+<p align="center"><img src=TABLET ></p> -->
+
+
  
 ## Table of Contents
 
