@@ -4,3 +4,11 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
+
+@media screen and (max-width: 620px) and (orientation: portrait) {
+  .birds-container {
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+  }
+}

@@ -5,23 +5,10 @@
 
 h1 {
   font-family: "Chelsea Market", cursive;
+  font-size: 5vw;
   margin: 0;
   padding-top: 1vw;
   padding-bottom: 1vw;
-}
-
-.us-state-map {
-  height: 37vw;
-  padding-top: 2vw;
-}
-
-path {
-  pointer-events: all;
-  fill: white;
-}
-path:hover {
-  opacity: 0.5;
-  cursor: pointer;
 }
 
 .goldfinch {
@@ -43,9 +30,29 @@ path:hover {
 }
 
 .burb-logo {
-  height: 10vh;
+  height: 8vh;
 }
 
 .hidden {
   display: none;
+}
+
+/* Small Tablet Styling */
+@media screen and (max-width: 620px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .burb-logo {
+    height: 5vw;
+  }
 }

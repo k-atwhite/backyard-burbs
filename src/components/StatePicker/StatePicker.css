@@ -1,0 +1,25 @@
+.us-state-map {
+  height: 39vw;
+  width: 100vw;
+  padding-top: 2vw;
+}
+path {
+  pointer-events: all;
+  fill: white;
+}
+path:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 620px) and (orientation: portrait) {
+ .us-state-map {
+   height: 100%;
+ }
+}
+
+@media screen and (min-width: 620px) and (max-width:950px) {
+  .us-state-map {
+    height: 100%;
+  }
+ }
