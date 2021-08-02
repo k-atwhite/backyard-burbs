@@ -1,0 +1,13 @@
+.us-state-map {
+  height: 37vw;
+  width: 100vw;
+  padding-top: 2vw;
+}
+path {
+  pointer-events: all;
+  fill: white;
+}
+path:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

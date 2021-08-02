@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './StatePicker.css';
+import './StatePicker.css'
 import USAMap from 'react-usa-map';
 import PropTypes from "prop-types";
 
