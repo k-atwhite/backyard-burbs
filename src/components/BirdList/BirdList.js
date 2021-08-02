@@ -4,18 +4,20 @@ import Bird from "../Bird/Bird";
 import PropTypes from "prop-types";
 
 const BirdList = ({ birdData }) => {
-  const regionalBirds = birdData.map((bird) => {
+  const regionalBirds = birdData.reduce((filteredBirds, bird) => {
+    const currentBird = <Bird
+      commonName={bird.comName}
+      scientificName={bird.sciName}
+      id={bird.speciesCode}
+      key={bird.speciesCode}
+    />;
+
     if (!bird.comName.includes("hybrid")) {
-      return (
-        <Bird
-          commonName={bird.comName}
-          scientificName={bird.sciName}
-          id={bird.speciesCode}
-          key={bird.speciesCode}
-        />
-      );
+      filteredBirds.push(currentBird);
     }
-  });
+
+    return filteredBirds;
+  }, []);
 
   return <section className="birds-container">{regionalBirds}</section>;
 };
