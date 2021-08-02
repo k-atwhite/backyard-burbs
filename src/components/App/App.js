@@ -40,6 +40,8 @@ const App = () => {
     <h2>Loading your birds...</h2>
   );
 
+  const noMyBirdMsg = !myBirds.length && <h2>GO FIND SOME BIRDS KIDDO!</h2>
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`App ${theme}`}>
@@ -72,6 +74,7 @@ const App = () => {
             <BirdList birdData={regionBirds} />
           </Route>
           <Route path="/myBirds">
+            {noMyBirdMsg}
             <BirdList birdData={myBirds} />
           </Route>
           <Route exact path="/">
