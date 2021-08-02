@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Bird.css";
 import { Link } from "react-router-dom";
 import { getImages } from '../../apiCalls';
@@ -24,20 +24,26 @@ const Bird = ({ commonName, scientificName, id }) => {
     return photoURL;
   }
 
-  getImages(scientificName, 1)
-  .then(data => {
-    if (!photos.length) {
-      const url = createURL(data.photos.photo[0])
-      setPhotos(url)
-    }
-  })
-  .catch(() => setError("Please try again later!"))
-  ;
+  useEffect(() => {
+    let isMounted = true;
+
+    getImages(scientificName, 1)
+      .then(data => {
+        if (isMounted) {
+          const url = createURL(data.photos.photo[0]);
+          setPhotos(url);
+        }
+      })
+      .catch(() => setError("Please try again later!"));
+
+      return () => {
+        isMounted = false;
+      }
+  }, [scientificName]);
 
   return (
     <Link to={`/birds/${id}`}>
-      {!!error.length &&
-            <h2>{error}</h2>}
+      {!!error.length && <h2>{error}</h2>}
       <div
       id={`${id}`}
       className={`bird-card`}
