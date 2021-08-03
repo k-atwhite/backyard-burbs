@@ -9,7 +9,7 @@
   ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
   
   
-Backyard Burbs is our "Stretch Tech Challenge" in Mod 3 of Turing School's Frontend program. We had the opportunity to choose a new technology to self-study and implement. Based on personal interest and suggestions from our mentors we chose to learn Context - a Global Variable Manager. Along with hooks, context is a powerful tool to simplify how data is passed to nested components. 
+Backyard Burbs is our "Stretch Tech Challenge" in Mod 3 of Turing School's Frontend program. We had the opportunity to choose a new technology to self-study and implement. Based on personal interest and suggestions from our mentors we chose to learn Context - a Global State Management tool. Along with hooks, context is a powerful tool to simplify how data is passed to nested components. 
 
 We soon found that our app was not complicated enough to warrant using context for our essential data management. However! It is a powerful tool to simplify creating a light and dark theme that persists across all components. We called our theme Goldfinch/Bluejay and we hope you enjoy the charming chirp when you toggle your theme!
 
