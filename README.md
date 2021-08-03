@@ -11,10 +11,10 @@
   
 Backyard Burbs is our "Stretch Tech Challenge" in Mod 3 of Turing School's Frontend program. We had the opportunity to choose a new technology to self-study and implement. Based on personal interest and suggestions from our mentors we chose to learn Context - a Global Variable Manager. Along with hooks, context is a powerful tool to simplify how data is passed to nested components. 
 
-We soon found that our app was not complicated enough to warrant using context for our essentail data management. However! It is a powerful tool to simplify creating a light and dark theme that persists across all components. We called our theme Goldfinch/Bluejay and we hope you enjoy the charming chirp when you toggle your theme!
+We soon found that our app was not complicated enough to warrant using context for our essential data management. However! It is a powerful tool to simplify creating a light and dark theme that persists across all components. We called our theme Goldfinch/Bluejay and we hope you enjoy the charming chirp when you toggle your theme!
 
 The app itself is designed to be a fun and colorful tool for children to begin identifying the birds in their backyard. You begin on a page showing a map of the USA. Please choose your state and then you will be guided to a list of the birds in your area. Simply click on the bird you believe you see, and you'll find more details such as: more images, the scientific name, the last time that bird was seen, and how many were seen. Click the binoculars and add that bird to your own list!
-A few design considerations we prioritized were: simplicty, large and responsive buttons, and color.
+A few design considerations we prioritized were: simplicity, large and responsive buttons, and color.
 
 ## [View Our App Here!](https://k-atwhite.github.io/backyard-burbs/)
 
