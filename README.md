@@ -78,7 +78,7 @@ Open a window in your web browser of choice, and visit `localhost:3000` to view 
 There are so many ways to improve this site. Some major priorities include:
 
 1. A bespoke splash screen!
-2. More robust search Criteria, including: size of bird, color of bird, exact location.
+2. More robust search criteria, including: size of bird, color of bird, exact location.
 3. More details for each bird - will need a third API for this.
 4. Bird songs attached to each Bird Detail page.
 5. An ability for users to upload their own photo.
